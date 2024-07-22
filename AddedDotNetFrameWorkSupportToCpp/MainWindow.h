@@ -30,6 +30,7 @@ namespace Project1 {
     private: System::Windows::Forms::Label^ myLabel;
     private: System::Windows::Forms::Panel^ mainPanel;
     private: System::Windows::Forms::PictureBox^ logoPictureBox;
+    private: System::Windows::Forms::Label^ developerLabel;  // Added for developer info
     private: System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
@@ -39,6 +40,7 @@ namespace Project1 {
                this->myLabel = (gcnew System::Windows::Forms::Label());
                this->mainPanel = (gcnew System::Windows::Forms::Panel());
                this->logoPictureBox = (gcnew System::Windows::Forms::PictureBox());
+               this->developerLabel = (gcnew System::Windows::Forms::Label());  // Initialize developerLabel
                this->mainPanel->SuspendLayout();
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->BeginInit();
                this->SuspendLayout();
@@ -70,9 +72,10 @@ namespace Project1 {
                this->mainPanel->Controls->Add(this->myButton);
                this->mainPanel->Controls->Add(this->myLabel);
                this->mainPanel->Controls->Add(this->logoPictureBox);
+               this->mainPanel->Controls->Add(this->developerLabel);  // Add developerLabel to the panel
                this->mainPanel->Location = System::Drawing::Point(12, 12);
                this->mainPanel->Name = L"mainPanel";
-               this->mainPanel->Size = System::Drawing::Size(360, 240);
+               this->mainPanel->Size = System::Drawing::Size(460, 300);  // Increased size for better visibility
                this->mainPanel->TabIndex = 2;
                this->mainPanel->BackColor = System::Drawing::Color::WhiteSmoke;
                // 
@@ -85,11 +88,22 @@ namespace Project1 {
                this->logoPictureBox->TabStop = false;
                this->logoPictureBox->Image = Image::FromFile(L"coding.png");
                // 
+               // developerLabel
+               // 
+               this->developerLabel->AutoSize = true;
+               this->developerLabel->Location = System::Drawing::Point(100, 250);  // Adjusted position
+               this->developerLabel->Name = L"developerLabel";
+               this->developerLabel->Size = System::Drawing::Size(250, 20);  // Adjusted size
+               this->developerLabel->TabIndex = 4;
+               this->developerLabel->Text = L"Developed by Muhammad Bilal Noshahi";
+               this->developerLabel->Font = (gcnew System::Drawing::Font(L"Arial", 10));  // Font size
+               this->developerLabel->ForeColor = System::Drawing::Color::Gray;  // Optional color
+               // 
                // MyForm
                // 
                this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
                this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-               this->ClientSize = System::Drawing::Size(384, 261);
+               this->ClientSize = System::Drawing::Size(484, 361);  // Increased ClientSize
                this->Controls->Add(this->mainPanel);
                this->Name = L"MyForm";
                this->Text = L"MyForm";
