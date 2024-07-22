@@ -93,7 +93,7 @@ namespace MainWindow
                this->Controls->Add(this->mainPanel);
                this->Name = L"MyMainWindow";
                this->Text = L"MyMainWindow";
-               this->mainPanel->ResumeLayout(false);
+               this->mainPanel->ResumeLayout(false);;
                this->mainPanel->PerformLayout();
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
                this->ResumeLayout(false);
