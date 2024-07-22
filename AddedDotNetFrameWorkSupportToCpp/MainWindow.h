@@ -83,7 +83,7 @@ namespace Project1 {
                this->logoPictureBox->Size = System::Drawing::Size(100, 100);
                this->logoPictureBox->TabIndex = 3;
                this->logoPictureBox->TabStop = false;
-               this->logoPictureBox->Image = Image::FromFile(L"coder.png");
+               this->logoPictureBox->Image = Image::FromFile(L"coding.png");
                // 
                // MyForm
                // 
