@@ -1,7 +1,7 @@
 #pragma once
 
-namespace MainWindow 
-{
+namespace Project1 {
+
     using namespace System;
     using namespace System::ComponentModel;
     using namespace System::Collections;
@@ -9,16 +9,16 @@ namespace MainWindow
     using namespace System::Data;
     using namespace System::Drawing;
 
-    public ref class MyMainWindow : public System::Windows::Forms::Form
+    public ref class MyForm : public System::Windows::Forms::Form
     {
     public:
-        MyMainWindow(void)
+        MyForm(void)
         {
             InitializeComponent();
         }
 
     protected:
-        ~MyMainWindow()
+        ~MyForm()
         {
             if (components)
             {
@@ -53,7 +53,7 @@ namespace MainWindow
                this->myButton->UseVisualStyleBackColor = true;
                this->myButton->BackColor = System::Drawing::Color::LightSkyBlue;
                this->myButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-               this->myButton->Click += gcnew System::EventHandler(this, &MyMainWindow::myButton_Click);
+               this->myButton->Click += gcnew System::EventHandler(this, &MyForm::myButton_Click);
                // 
                // myLabel
                // 
@@ -85,15 +85,15 @@ namespace MainWindow
                this->logoPictureBox->TabStop = false;
                this->logoPictureBox->Image = Image::FromFile(L"coder.png");
                // 
-               // MyMainWindow
+               // MyForm
                // 
                this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
                this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
                this->ClientSize = System::Drawing::Size(384, 261);
                this->Controls->Add(this->mainPanel);
-               this->Name = L"MyMainWindow";
-               this->Text = L"MyMainWindow";
-               this->mainPanel->ResumeLayout(false);;
+               this->Name = L"MyForm";
+               this->Text = L"MyForm";
+               this->mainPanel->ResumeLayout(false);
                this->mainPanel->PerformLayout();
                (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoPictureBox))->EndInit();
                this->ResumeLayout(false);

@@ -8,6 +8,6 @@ void main(array<String^>^ args)
 {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
-    MainWindow::MyMainWindow form;
+    Project1::MyForm form;
     Application::Run(% form);
 }
